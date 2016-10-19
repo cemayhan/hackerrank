@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    
+    public static String score(int[] a, int[] b){
+        int i = 0;
+        int aresult = 0;
+        int bresult = 0;
+        while(i<3){
+            if(a[i]>b[i]){
+                aresult++;
+                i++;
+            }
+            else if(a[i]<b[i]){
+                bresult++;
+                i++;
+            }
+            else{
+                i++;
+            }
+        }
+        String sonuc = Integer.toString(aresult) + " " + Integer.toString(bresult);
+        return sonuc;
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int a0 = in.nextInt();
+        int a1 = in.nextInt();
+        int a2 = in.nextInt();
+        int b0 = in.nextInt();
+        int b1 = in.nextInt();
+        int b2 = in.nextInt();
+        
+        int[] alice = {a0,a1,a2};
+        int[] bob = {b0,b1,b2};
+        
+        System.out.println(score(alice,bob));
+        
+    }
+}

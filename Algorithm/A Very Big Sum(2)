@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        
+        BigInteger num = new BigInteger("0");
+        
+        BigInteger rakam;
+        
+        
+        
+        int n = in.nextInt();
+        int arr[] = new int[n];
+        for(int arr_i=0; arr_i < n; arr_i++){
+            arr[arr_i] = in.nextInt();
+            
+            rakam = new BigInteger(String.valueOf(arr[arr_i]));
+            num = num.add(rakam);
+        }
+        
+        System.out.println(num);
+    }
+}

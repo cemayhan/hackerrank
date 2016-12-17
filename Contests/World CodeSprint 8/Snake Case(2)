@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String s = in.next();
+
+        if (s == null) {
+            System.out.println("0");
+        } else {
+
+            Pattern pattern = Pattern.compile("_");
+            Matcher matcher = pattern.matcher(s);
+
+            int count = 1;
+            while (matcher.find()) {
+                count++;
+            }
+            System.out.println(count);
+
+        }
+    }
+
+}

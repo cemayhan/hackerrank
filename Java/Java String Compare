@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String text = sc.nextLine();
+       //String text = text2.toLowerCase();
+        int uzunluk = sc.nextInt();
+        
+        int n = text.length();
+        String m = text.substring(0,uzunluk);
+        String ne = text.substring(0,uzunluk);
+        for(int i = 0; i<n-(uzunluk-1); i++){
+            if((text.substring(i,i+uzunluk)).compareTo(ne)<1){
+                ne = text.substring(i,i+uzunluk);
+            }
+        }
+        System.out.println(ne);
+        
+        for(int i = 0; i<n-(uzunluk-1); i++){
+            if((text.substring(i,i+uzunluk)).compareTo(m)>1){
+                m = text.substring(i,i+uzunluk);
+            }
+        }
+        System.out.println(m);
+    }
+}
